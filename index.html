@@ -233,14 +233,7 @@
     align-items: center;
   }
 }
- <script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('show');
-  }
 
-  function closeDetail() {
-    $('#detailView').fadeOut();
-  }
     /* Mobile Styles */
     @media (max-width: 768px) {
   .boho-grid {
@@ -307,7 +300,14 @@
 </head>
 
 <body>
+ <script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
 
+  function closeDetail() {
+    $('#detailView').fadeOut();
+  }
   <header>
   <div class="navbar">
     <div class="brand-name">clean canine Co.</div>
