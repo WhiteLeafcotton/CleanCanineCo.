@@ -233,7 +233,14 @@
     align-items: center;
   }
 }
+ <script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
 
+  function closeDetail() {
+    $('#detailView').fadeOut();
+  }
     /* Mobile Styles */
     @media (max-width: 768px) {
   .boho-grid {
@@ -607,14 +614,7 @@
       ];
   }
 }
-  <script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('show');
-  }
-
-  function closeDetail() {
-    $('#detailView').fadeOut();
-  }
+ 
 </script>
 
 </body>
