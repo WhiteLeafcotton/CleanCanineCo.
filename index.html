@@ -296,24 +296,25 @@
   }
 }
 
-  </style>
+</style>
 </head>
 
 <body>
 
   <header>
-  <div class="navbar">
-    <div class="brand-name">clean canine Co.</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <ul class="nav-links">
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="Reviews.html">Reviews</a></li>
-      <li><a href="Services.html">Services</a></li>
-      <li><a href="Products.html">Products</a></li>
-      <li><a href="Book-Appointment.html">Book Appointment</a></li>
-    </ul>
-  </div>
-</header>
+    <div class="navbar">
+      <div class="brand-name">clean canine Co.</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="Reviews.html">Reviews</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="Book-Appointment.html">Book Appointment</a></li>
+      </ul>
+    </div>
+  </header>
+
 
 <div class="hero">
   <div class="hero-content">
@@ -472,18 +473,18 @@
 </div>
  
 
- <script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('show');
-  }
 
-  function closeDetail() {
-    $('#detailView').fadeOut();
-  }
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script>
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+
+    function closeDetail() {
+      $('#detailView').fadeOut();
+    }
   $(document).ready(function () {
     $('.kit').click(function () {
       var kitId = $(this).data('kit');
