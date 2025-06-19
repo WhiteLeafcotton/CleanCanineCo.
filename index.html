@@ -18,12 +18,16 @@
       padding: 0;
     }
 
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     body {
       font-family: 'DM Sans', sans-serif;
       background: #fff;
       color: #111;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     header {
@@ -65,31 +69,36 @@
       text-transform: uppercase;
     }
 
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
     .hero {
-  position: relative; /* Important for absolute positioning inside */
-  background-image: url(https://github.com/WhiteLeafcotton/CleanCanineCo./blob/main/Untitled%20design-39.png?raw=true);
-  background-size: cover;
-  background-position: center;
-  height: 75vh;
-  width: 96%;
-  margin: calc(3.5rem + 2%) auto 2%;
-  border-radius: 0;
-}
+      position: relative;
+      background-image: url(https://github.com/WhiteLeafcotton/CleanCanineCo./blob/main/Untitled%20design-39.png?raw=true);
+      background-size: cover;
+      background-position: center;
+      height: 75vh;
+      width: 96%;
+      margin: calc(3.5rem + 2%) auto 2%;
+      border-radius: 0;
+    }
 
-.hero-content {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  z-index: 2;
-  color: #000;
-}
+    .hero-content {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      z-index: 2;
+      color: #000;
+    }
 
-.hero-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
+    .hero-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
 
     .section {
       width: 96%;
@@ -115,7 +124,6 @@
       left: 0.7rem;
       background: transparent;
       padding: 0.5rem 0.8rem;
-      border-radius: 6px;
       z-index: 2;
       text-align: left;
     }
@@ -126,57 +134,55 @@
       color: #111;
       margin-bottom: 0.4rem;
     }
-    .discover-link {
-  position: relative;
-  display: inline-block;
-  font-size: 0.85rem;
-  text-decoration: none;
-  color: #000;
-  padding: 0.3rem 0.7rem;
-  overflow: hidden;
-  transition: color 0.3s ease;
-}
 
-.discover-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background-color: #000;
-  transition: all 0.3s ease;
-  z-index: 0;
-}
+    .discover-link,
+    .shop-link {
+      position: relative;
+      display: inline-block;
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: #000;
+      padding: 0.3rem 0.7rem;
+      overflow: hidden;
+      transition: color 0.3s ease;
+    }
 
-.discover-link:hover {
-  color: #fff;
-}
+    .discover-link::after,
+    .shop-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #000;
+      transition: all 0.3s ease;
+      z-index: 0;
+    }
 
-.discover-link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #000;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-  z-index: -1;
-}
+    .discover-link::before,
+    .shop-link::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      z-index: -1;
+    }
 
-.discover-link:hover::before {
-  transform: translateY(0);
-}
+    .discover-link:hover,
+    .shop-link:hover {
+      color: #fff;
+    }
 
-
-
-
-
-
-
-    
+    .discover-link:hover::before,
+    .shop-link:hover::before {
+      transform: translateY(0);
+    }
 
     .kit img {
       width: 100%;
@@ -185,56 +191,10 @@
       display: block;
     }
 
-    .shop-link {
-  position: relative;
-  display: inline-block;
-  font-size: 0.85rem;
-  text-decoration: none;
-  color: #000;
-  padding: 0.3rem 0.7rem;
-  overflow: hidden;
-  transition: color 0.3s ease;
-}
-
-.shop-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background-color: #000;
-  transition: all 0.3s ease;
-  z-index: 0;
-}
-
-.shop-link:hover {
-  color: #fff;
-}
-
-.shop-link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #000;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-  z-index: -1;
-}
-
-.shop-link:hover::before {
-  transform: translateY(0);
-}
-
-
     .carousel {
       margin-bottom: 2%;
       margin-top: 4%;
     }
-   
 
     .carousel img {
       width: 100%;
@@ -242,158 +202,91 @@
       object-fit: cover;
     }
 
-    .detail-view {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2000;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: y mandatory;
-    }
-
-    .detail-carousel {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 0;
-      position: relative;
-    }
-    <style>
-.detail-slide {
-  position: relative;
-  height: 500px; /* or whatever height you want */
-  overflow: hidden;
-}
-
-.detail-info {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-  padding: 16px;
-  box-sizing: border-box;
-}
-
-.add-to-bag {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  font-size: 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.add-to-bag:hover {
-  background-color: #333;
-}
-
-
-.detail-info p,
-.detail-info button {
-  margin: 0;
-  font-size: 14px; /* Adjust the font size as needed */
-}
-
-
-
-
-
-.kit-description,
-.kit-price {
-  margin: 0;
-  font-size: 14px;
-  color: #333;
-}
-
-    .detail-carousel img {
-      width: 100%;
-      max-height: 90vh;
-      object-fit: contain;
-      scroll-snap-align: center;
-      margin-bottom: 2rem;
-      border-radius: 12px;
-    }
-
-    .shop-button {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background-color: #000;
-      color: #fff;
-      border: none;
-      padding: 0.5rem 1rem;
-      font-size: 0.85rem;
-      border-radius: 5px;
-      cursor: pointer;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
-    }
-
-    .shop-button:hover {
-      opacity: 1;
-    }
-
-
-    .kit-description, .kit-price {
-      font-size: 0.9rem;
-      color: #111;
-      margin-top: 0.5rem;
-    }
-
     footer {
-  text-align: center;
-  padding: 1.5rem 0;
-  font-size: 0.9rem;
-  color: #555;
-  background-color: #f8f8f8;
-  border-top: 1px solid #eaeaea;
-}
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+      color: #555;
+      background-color: #f8f8f8;
+      border-top: 1px solid #eaeaea;
+    }
 
-
-
+    /* Mobile Styles */
     @media (max-width: 768px) {
       .boho-grid {
         grid-template-columns: 1fr;
       }
 
       .kit img {
-        height: 350px;
+        height: 300px;
       }
 
       .carousel img {
-        height: 300px;
+        height: 280px;
+      }
+
+      .hero {
+        height: 50vh;
+        margin-top: 4.5rem;
+      }
+
+      .hero-title {
+        font-size: 1.2rem;
+      }
+
+      .kit-title {
+        font-size: 0.85rem;
+      }
+
+      .kit-description {
+        font-size: 0.8rem;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        background-color: #000;
+        width: 100%;
+        display: none;
+        padding: 0.5rem 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        color: #fff;
+      }
+
+      footer > div {
+        grid-template-columns: 1fr !important;
+        text-align: left !important;
       }
     }
   </style>
 </head>
-  
+
 <body>
 
-<header>
-  <div class="navbar">
-    <div class="brand-name">clean canine Co.</div>
-    <ul class="nav-links">
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="Reviews.html">Reviews</a></li>
-      <li><a href="Services.html">Services</a></li>
-      <li><a href="Products.html">Products </a></li>
-      <li><a href="Book-Appointment.html">Book Appointment </a></li>
-    </ul>
-  </div>
-</header>
+  <header>
+    <div class="navbar">
+      <div class="brand-name">clean canine Co.</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="Reviews.html">Reviews</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Products.html">Products </a></li>
+        <li><a href="Book-Appointment.html">Book Appointment </a></li>
+      </ul>
+    </div>
+  </header>
 
 <div class="hero">
   <div class="hero-content">
