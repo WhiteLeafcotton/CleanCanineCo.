@@ -210,6 +210,29 @@
       background-color: #f8f8f8;
       border-top: 1px solid #eaeaea;
     }
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; /* hide menu initially on mobile */
+    flex-direction: column;
+    background-color: #000;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links.show {
+    display: flex; /* show menu when toggled */
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
     /* Mobile Styles */
     @media (max-width: 768px) {
