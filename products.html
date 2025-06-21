@@ -29,7 +29,7 @@
 
     .products-section {
       width: 96%; margin: 6rem auto 2rem;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
     }
     .product-card {
       position: relative;
@@ -108,8 +108,21 @@
   </header>
 
   <section class="products-section">
-    <!-- 9 product cards here (unchanged) -->
-    <!-- existing cards remain as-is -->
+    <!-- 9 product cards -->
+    <script>
+      const productsSection = document.currentScript.parentElement;
+      for (let i = 1; i <= 9; i++) {
+        const price = (10 + i * 2).toFixed(2);
+        productsSection.innerHTML += `
+        <div class="product-card">
+          <span class="badge">NEW</span>
+          <img src="https://via.placeholder.com/200?text=Product+${i}" alt="Product ${i}" class="product-image">
+          <div class="product-title">Product ${i}</div>
+          <div class="product-price">$${price}</div>
+          <button class="add-cart" onclick="addToCart('Product ${i}', ${price})">Add to Cart</button>
+        </div>`;
+      }
+    </script>
   </section>
 
   <div id="cart">
@@ -136,7 +149,7 @@
     }
 
     function addToCart(title, price) {
-      cartItems.push({ title, price });
+      cartItems.push({ title, price: parseFloat(price) });
       saveCart();
       displayCart();
       toggleCart(true);
