@@ -89,6 +89,54 @@
       border-radius: 8px;
       font-size: 2rem;
     }
+.hero {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.desktop-img {
+  background-image: url('https://github.com/WhiteLeafcotton/CleanCanineCo./blob/main/Untitled%20design-53.png?raw=true'); /* your desktop image */
+  display: block;
+}
+
+.mobile-img {
+  background-image: url('https://example.com/mobile-image.jpg'); /* your mobile image */
+  display: none;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Show mobile image instead on small screens */
+@media (max-width: 768px) {
+  .desktop-img {
+    display: none;
+  }
+  .mobile-img {
+    display: block;
+  }
+}
 
     .services-section {
       width: 96%;
@@ -180,10 +228,14 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
+  <div class="hero-image desktop-img"></div>
+  <div class="hero-image mobile-img"></div>
+  <div class="hero-text">
     <h1>Mobile Grooming Services</h1>
-  </section>
+  </div>
+</section>
+
 
   <!-- Services Grid -->
  <!-- Font Awesome CDN (put this in <head> if not already included) -->
