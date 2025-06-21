@@ -100,11 +100,13 @@
 
     .service-card {
       border: 1px solid #eee;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
       border-radius: 8px;
-      background: #f9f9f9;
+      background: #fff; /* removed gray */
+      text-align: center;
       transition: all 0.3s ease;
-    }
+     }
+
 
     .service-card:hover {
       background-color: #fff;
@@ -184,40 +186,52 @@
   </section>
 
   <!-- Services Grid -->
-  <section class="services-section">
-    <div class="service-card">
-      <h2 class="service-title">Nail Trim</h2>
-      <p class="service-desc">Safe and gentle nail trimming to keep your pup comfy and floors scratch-free.</p>
-    </div>
-    <div class="service-card">
-      <h2 class="service-title">Teeth Brushing</h2>
-      <p class="service-desc">Fresh breath and healthy gums — we make oral care easy for your dog.</p>
-    </div>
-    <div class="service-card">
-      <h2 class="service-title">Paw Trim</h2>
-      <p class="service-desc">We carefully trim paw fur for a cleaner, neater, and safer walk.</p>
-    </div>
-    <div class="service-card">
-      <h2 class="service-title">Face Trim</h2>
-      <p class="service-desc">Keep the eyes, mouth, and ears tidy with our gentle facial trims.</p>
-    </div>
-    <div class="service-card">
-      <h2 class="service-title">Sanitary Trim</h2>
-      <p class="service-desc">Discreet and hygienic grooming to help your pup stay clean and fresh.</p>
-    </div>
-    <div class="service-card">
-      <h2 class="service-title">Ear Cleaning</h2>
-      <p class="service-desc">Remove buildup and prevent infections with our gentle ear cleaning service.</p>
-    </div>
-    <div class="service-card">
-      <h2 class="service-title">Shampoo & Blowout</h2>
-      <p class="service-desc">A gentle bath and fluff dry to bring out the best in your dog’s coat.</p>
-    </div>
-    <div class="service-card">
-      <h2 class="service-title">Deshedding</h2>
-      <p class="service-desc">Reduce loose fur and shedding with a professional deshedding session.</p>
-    </div>
-  </section>
+ <!-- Font Awesome CDN (put this in <head> if not already included) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<section class="services-section">
+  <div class="service-card">
+    <i class="fas fa-cut fa-2x" style="color: #000; margin-bottom: 0.6rem;"></i>
+    <h2 class="service-title">Nail Trim</h2>
+    <p class="service-desc">Safe and gentle nail trimming to keep your pup comfy and floors scratch-free.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-tooth fa-2x" style="color: #000; margin-bottom: 0.6rem;"></i>
+    <h2 class="service-title">Teeth Brushing</h2>
+    <p class="service-desc">Fresh breath and healthy gums — we make oral care easy for your dog.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-paw fa-2x" style="color: #000; margin-bottom: 0.6rem;"></i>
+    <h2 class="service-title">Paw Trim</h2>
+    <p class="service-desc">We carefully trim paw fur for a cleaner, neater, and safer walk.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-scissors fa-2x" style="color: #000; margin-bottom: 0.6rem;"></i>
+    <h2 class="service-title">Face Trim</h2>
+    <p class="service-desc">Keep the eyes, mouth, and ears tidy with our gentle facial trims.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-bath fa-2x" style="color: #000; margin-bottom: 0.6rem;"></i>
+    <h2 class="service-title">Sanitary Trim</h2>
+    <p class="service-desc">Discreet and hygienic grooming to help your pup stay clean and fresh.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-ear-listen fa-2x" style="color: #000; margin-bottom: 0.6rem;"></i>
+    <h2 class="service-title">Ear Cleaning</h2>
+    <p class="service-desc">Remove buildup and prevent infections with our gentle ear cleaning service.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-wind fa-2x" style="color: #000; margin-bottom: 0.6rem;"></i>
+    <h2 class="service-title">Shampoo & Blowout</h2>
+    <p class="service-desc">A gentle bath and fluff dry to bring out the best in your dog’s coat.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-dog fa-2x" style="color: #000; margin-bottom: 0.6rem;"></i>
+    <h2 class="service-title">Deshedding</h2>
+    <p class="service-desc">Reduce loose fur and shedding with a professional deshedding session.</p>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer>
