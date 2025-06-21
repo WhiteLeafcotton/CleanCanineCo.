@@ -117,16 +117,18 @@
 }
 
 .hero-text {
-  position: relative;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
   z-index: 2;
-  text-align: center;
+  text-align: left;
   color: white;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 1rem;
+  padding: 1rem 1.25rem;
   border-radius: 8px;
+  max-width: 80%;
+  /* background-color: rgba(0, 0, 0, 0.4); <-- removed */
 }
+
 
 /* Show mobile image instead on small screens */
 @media (max-width: 768px) {
